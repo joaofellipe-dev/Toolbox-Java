@@ -26,8 +26,7 @@ public class ProcessingAudit {
     @Column(name = "duration_ms", nullable = false)
     private long durationMs;
 
-    @Column(name = "status"
-    n nullable = false)
+    @Column(name = "status")
     private String status;
 
     @Column(name = "created_at", nullable = false)
@@ -35,8 +34,16 @@ public class ProcessingAudit {
 
     public ProcessingAudit() {
     }
+    public ProcessingAudit(String operationType, String fileName, long inputSizeBytes, long durationMs, String status) {
+        this.operationType = operationType;
+        this.fileName = fileName;
+        this.inputSizeBytes = inputSizeBytes;
+        this.durationMs = durationMs;
+        this.status = status;
+        this.createdAt = Instant.now();
+    }
 
-    public ProcessingAudit(long id, String operationType, String fileName, long inputSizeBytes, long durationMs, String status, Instante createdAt) {
+    public ProcessingAudit(long id, String operationType, String fileName, long inputSizeBytes, long durationMs, String status, Instant createdAt) {
         this.id = id;
         this.operationType = operationType;
         this.fileName = fileName;

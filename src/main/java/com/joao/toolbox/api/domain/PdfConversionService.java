@@ -1,6 +1,17 @@
 package com.joao.toolbox.api.domain;
 
+import com.joao.toolbox.api.audit.ProcessingAudit;
+import com.joao.toolbox.api.audit.ProcessingAuditRepository;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 
 @Service
 public class PdfConversionService {
