@@ -17,7 +17,6 @@ public class PdfConversionController {
     public PdfConversionController(PdfConversionService pdfConversionService) {
         this.pdfConversionService = pdfConversionService;
     }
-
     @PostMapping(value = "/image-to-pdf", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<byte[]> convertImageToPdf(@RequestParam("file") MultipartFile file) {
         try {
