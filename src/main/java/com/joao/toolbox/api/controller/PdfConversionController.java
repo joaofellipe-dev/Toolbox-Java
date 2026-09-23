@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/api/v1/conversion/image-to-pdf")
+@RequestMapping("/api/v1/conversion")
 public class PdfConversionController {
     private final PdfConversionService pdfConversionService;
 
