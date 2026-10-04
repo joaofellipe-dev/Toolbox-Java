@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/api/v1/conversion")
+@RequestMapping("/api/v1/conversions")
 public class PdfConversionController {
     private final PdfConversionService pdfConversionService;
 
